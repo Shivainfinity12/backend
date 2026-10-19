@@ -17,10 +17,12 @@ app.use(cookieParser());
 
 // routes import
 import userRouter from "./routes/user.routes.js";
+import manitErpRoute from "./routes/manitErp.routes.js";
 
 
 
 // routes declaration
+app.use("/", manitErpRoute)
 app.use("/api/v1/users", userRouter)
 
 export {app}
